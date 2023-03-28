@@ -115,3 +115,51 @@ No caminho da requisição substitua `:user_id` pelo ID do usuário que deseja r
 - **DELETE** --> `/user/delete/:user_id`
 
 No caminho da requisição substitua `:user_id` pelo ID do usuário que deseja excluir.
+
+### Cadastrar uma categoria:
+
+- **POST** --> `/category/create`
+
+```json
+{
+  "name": "Supermercado",
+  "description": "Destinado ao comércio de alimentos, bebidas, utensílios domésticos, produtos pet e, às vezes, eletrônicos e utensílios domésticos."
+}
+```
+
+Siga a hierarquia do objeto exemplificada acima. Segue abaixo uma tabela com os valores aceitos pelo corpo da requisição:
+
+| Nome        | Valor       | Descrição              | Obrigatório | Padrão |
+| ----------- | ----------- | ---------------------- | ----------- | ------ |
+| name        | string(35)  | Nome da categoria      | &check;     |        |
+| description | string(150) | Descrição da categoria |             | _null_ |
+
+### Editar cadastro de uma categoria:
+
+- **PUT** --> `/category/update/:category_id`
+
+No caminho da requisição substitua `:category_id` pelo ID do categoria que deseja editar.
+
+```json
+{
+  "name": "Departamento",
+  "description": "Destinado ao comércio de sapatos, roupas, acessórios, cosméticos, jóias, artigos de decoração, camas, mesas, banho e muito mais."
+}
+```
+
+| Nome        | Valor       | Descrição              | Obrigatório | Padrão |
+| ----------- | ----------- | ---------------------- | ----------- | ------ |
+| name        | string(35)  | Nome da categoria      |             |        |
+| description | string(150) | Descrição da categoria |             | _null_ |
+
+### Obter uma categoria pelo ID:
+
+- **GET** --> `/category/get_id/:category_id`
+
+No caminho da requisição substitua `:category_id` pelo ID do categoria que deseja retornar.
+
+### Excluir uma categoria:
+
+- **DELETE** --> `/category/delete/:category_id`
+
+No caminho da requisição substitua `:category_id` pelo ID do categoria que deseja excluir.

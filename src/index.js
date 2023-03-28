@@ -21,3 +21,6 @@ app.get('/', (req, res) => {
 // routes
 const UserRoutes = require('./routes/UserRoutes');
 app.use('/user', UserRoutes);
+
+const CategoryRoutes = require('./routes/CategoryRoutes');
+app.use('/category', CategoryRoutes);
