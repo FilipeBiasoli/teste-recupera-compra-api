@@ -72,8 +72,8 @@ npm start
 
 ```json
 {
-  "name": "Anakin Skywalker",
-  "email": "anakin.skywalker@gmail.com"
+  "name": "Flavia Oliveira",
+  "email": "flavia.oliveira@gmail.com"
 }
 ```
 
@@ -94,8 +94,8 @@ No caminho da requisição substitua `:user_id` pelo ID do usuário que deseja e
 
 ```json
 {
-  "name": "Darth Vader",
-  "email": "darth.vader@gmail.com"
+  "name": "Joyce Sampaio",
+  "email": "joyce.sampaio@gmail.com"
 }
 ```
 
