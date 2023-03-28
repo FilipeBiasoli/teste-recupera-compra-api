@@ -1,3 +1,4 @@
+const { Op } = require('sequelize');
 const UserModel = require('../database/models/UserModel');
 
 class UserController {
@@ -49,6 +50,32 @@ class UserController {
   async getId(req, res) {
     try {
       await UserModel.findByPk(req.params.user_id).then((response) => {
+        return res.status(200).json(response);
+      });
+    } catch (e) {
+      return res.status(500).json(e);
+    }
+  }
+
+  // get user by search
+  async search(req, res) {
+    try {
+      await UserModel.findAll({
+        where: {
+          [Op.or]: [
+            {
+              name: {
+                [Op.like]: `%${req.params.search}%`,
+              },
+            },
+            {
+              email: {
+                [Op.like]: `%${req.params.search}%`,
+              },
+            },
+          ],
+        },
+      }).then((response) => {
         return res.status(200).json(response);
       });
     } catch (e) {

@@ -18,6 +18,11 @@ class UserValidation {
   async getId(req, res, next) {
     next();
   }
+
+  // validation to get user by search
+  async search(req, res, next) {
+    next();
+  }
 }
 
 module.exports = new UserValidation();

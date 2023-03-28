@@ -110,6 +110,18 @@ No caminho da requisição substitua `:user_id` pelo ID do usuário que deseja e
 
 No caminho da requisição substitua `:user_id` pelo ID do usuário que deseja retornar.
 
+### Pesquisar por usuários:
+
+Retorna uma lista de usuários segundo o valor da busca.
+
+- **GET** --> `/user/search/:search`
+
+No caminho da requisição substitua `:search` pelo termo a ser buscado.
+
+Você pode buscar pelo **nome** ou **e-mail** de um usuário.
+
+A busca é feita por um termo em qualquer posição do campo, ou seja, não importa se você buscou por um termo completo ou por parte dele, será retornado.
+
 ### Excluir um usuário:
 
 - **DELETE** --> `/user/delete/:user_id`
