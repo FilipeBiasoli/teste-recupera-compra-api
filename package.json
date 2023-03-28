@@ -1,11 +1,29 @@
 {
   "name": "teste-recupera-compra-api",
-  "description": "",
+  "version": "1.0.0",
+  "description": "Esse repositório contém a API do teste para a empresa Recupera Compra.",
   "main": "src/index.js",
   "scripts": {
     "start": "nodemon src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "create_database": "npx sequelize-cli db:create",
+    "drop_database": "npx sequelize-cli db:drop",
+    "migrations": "npx sequelize-cli db:migrate",
+    "seeds": "npx sequelize-cli db:seed:all",
+    "create_migration": "npx sequelize-cli migration:generate --name migration-name",
+    "create_seed": "npx sequelize-cli seed:generate --name seed-name"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FilipeBiasoli/teste-recupera-compra-api.git"
+  },
+  "keywords": [],
+  "author": "Filipe Biasoli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FilipeBiasoli/teste-recupera-compra-api/issues"
+  },
+  "homepage": "https://github.com/FilipeBiasoli/teste-recupera-compra-api#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
