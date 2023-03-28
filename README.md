@@ -65,3 +65,53 @@ npm start
 ```
 
 ## Rotas
+
+### Cadastrar um usuário:
+
+- **POST** --> `/user/create`
+
+```json
+{
+  "name": "Anakin Skywalker",
+  "email": "anakin.skywalker@gmail.com"
+}
+```
+
+Siga a hierarquia do objeto exemplificada acima. Segue abaixo uma tabela com os valores aceitos pelo corpo da requisição:
+
+| Nome  | Valor       | Descrição         | Obrigatório | Padrão |
+| ----- | ----------- | ----------------- | ----------- | ------ |
+| name  | string(35)  | Nome do usuário   | &check;     |        |
+| email | string(255) | E-mail do usuário | &check;     |        |
+
+Não é possível criar dois usuários com o mesmo e-mail.
+
+### Editar cadastro de um usuário:
+
+- **PUT** --> `/user/update/:user_id`
+
+No caminho da requisição substitua `:user_id` pelo ID do usuário que deseja editar.
+
+```json
+{
+  "name": "Darth Vader",
+  "email": "darth.vader@gmail.com"
+}
+```
+
+| Nome  | Valor       | Descrição         | Obrigatório | Padrão |
+| ----- | ----------- | ----------------- | ----------- | ------ |
+| name  | string(35)  | Nome do usuário   |             |        |
+| email | string(255) | E-mail do usuário |             |        |
+
+### Obter um usuário pelo ID:
+
+- **GET** --> `/user/get_id/:user_id`
+
+No caminho da requisição substitua `:user_id` pelo ID do usuário que deseja retornar.
+
+### Excluir um usuário:
+
+- **DELETE** --> `/user/delete/:user_id`
+
+No caminho da requisição substitua `:user_id` pelo ID do usuário que deseja excluir.

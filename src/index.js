@@ -19,3 +19,5 @@ app.get('/', (req, res) => {
 });
 
 // routes
+const UserRoutes = require('./routes/UserRoutes');
+app.use('/user', UserRoutes);
