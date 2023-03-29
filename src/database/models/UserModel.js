@@ -19,6 +19,10 @@ const UserModel = database.define(
       allowNull: false,
       unique: true,
     },
+    password: {
+      type: Sequelize.STRING(30),
+      allowNull: false,
+    },
   },
   {
     timestamps: false,
