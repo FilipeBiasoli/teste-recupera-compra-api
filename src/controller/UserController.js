@@ -93,6 +93,21 @@ class UserController {
       return res.status(500).json(e);
     }
   }
+
+  // get user by email
+  async getEmail(req, res) {
+    try {
+      await UserModel.findOne({
+        where: {
+          email: req.params.email,
+        },
+      }).then((response) => {
+        return res.status(200).json(response);
+      });
+    } catch (e) {
+      return res.status(500).json(e);
+    }
+  }
 }
 
 module.exports = new UserController();

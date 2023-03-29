@@ -110,6 +110,12 @@ No caminho da requisição substitua `:user_id` pelo ID do usuário que deseja e
 
 No caminho da requisição substitua `:user_id` pelo ID do usuário que deseja retornar.
 
+### Obter um usuário pelo e-mail:
+
+- **GET** --> `/user/get_email/:email`
+
+No caminho da requisição substitua `:email` pelo e-mail do usuário que deseja retornar.
+
 ### Obter lista com todos os usuários:
 
 - **GET** --> `/user/get_all`

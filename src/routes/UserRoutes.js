@@ -21,4 +21,7 @@ app.get('/search/:search', UserValidation.search, UserController.search);
 // route to get all users
 app.get('/get_all', UserValidation.getAll, UserController.getAll);
 
+// route to get user by email
+app.get('/get_email/:email', UserValidation.getEmail, UserController.getEmail);
+
 module.exports = app;

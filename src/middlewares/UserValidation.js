@@ -28,6 +28,11 @@ class UserValidation {
   async getAll(req, res, next) {
     next();
   }
+
+  // validation to get user by email
+  async getEmail(req, res, next) {
+    next();
+  }
 }
 
 module.exports = new UserValidation();
