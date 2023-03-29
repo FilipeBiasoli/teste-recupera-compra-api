@@ -18,6 +18,11 @@ class CategoryValidation {
   async getId(req, res, next) {
     next();
   }
+
+  // validation to get all categories
+  async getAll(req, res, next) {
+    next();
+  }
 }
 
 module.exports = new CategoryValidation();

@@ -20,11 +20,14 @@ app.delete(
   CategoryController.delete
 );
 
-// route to get privilege by id
+// route to get category
 app.get(
   '/get_id/:category_id',
   CategoryValidation.getId,
   CategoryController.getId
 );
+
+// route to get all categories
+app.get('/get_all', CategoryValidation.getAll, CategoryController.getAll);
 
 module.exports = app;

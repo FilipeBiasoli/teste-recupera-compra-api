@@ -174,6 +174,10 @@ No caminho da requisição substitua `:category_id` pelo ID do categoria que des
 
 No caminho da requisição substitua `:category_id` pelo ID do categoria que deseja retornar.
 
+### Obter lista com todas as categorias:
+
+- **GET** --> `/category/get_all`
+
 ### Excluir uma categoria:
 
 - **DELETE** --> `/category/delete/:category_id`
