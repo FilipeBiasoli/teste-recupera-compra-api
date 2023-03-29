@@ -23,6 +23,11 @@ class UserValidation {
   async search(req, res, next) {
     next();
   }
+
+  // validation to get all users
+  async getAll(req, res, next) {
+    next();
+  }
 }
 
 module.exports = new UserValidation();

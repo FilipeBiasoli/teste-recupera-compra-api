@@ -12,10 +12,13 @@ app.put('/update/:user_id', UserValidation.update, UserController.update);
 // route to delete user
 app.delete('/delete/:user_id', UserValidation.delete, UserController.delete);
 
-// route to get privilege by id
+// route to get user by id
 app.get('/get_id/:user_id', UserValidation.getId, UserController.getId);
 
-// route to get privilege by search
+// route to get user by search
 app.get('/search/:search', UserValidation.search, UserController.search);
+
+// route to get all users
+app.get('/get_all', UserValidation.getAll, UserController.getAll);
 
 module.exports = app;

@@ -82,6 +82,17 @@ class UserController {
       return res.status(500).json(e);
     }
   }
+
+  // get all users
+  async getAll(req, res) {
+    try {
+      await UserModel.findAll().then((response) => {
+        return res.status(200).json(response);
+      });
+    } catch (e) {
+      return res.status(500).json(e);
+    }
+  }
 }
 
 module.exports = new UserController();
