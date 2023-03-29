@@ -73,16 +73,18 @@ npm start
 ```json
 {
   "name": "Flavia Oliveira",
-  "email": "flavia.oliveira@gmail.com"
+  "email": "flavia.oliveira@gmail.com",
+  "password": "123"
 }
 ```
 
 Siga a hierarquia do objeto exemplificada acima. Segue abaixo uma tabela com os valores aceitos pelo corpo da requisição:
 
-| Nome  | Valor       | Descrição         | Obrigatório | Padrão |
-| ----- | ----------- | ----------------- | ----------- | ------ |
-| name  | string(35)  | Nome do usuário   | &check;     |        |
-| email | string(255) | E-mail do usuário | &check;     |        |
+| Nome     | Valor       | Descrição         | Obrigatório | Padrão |
+| -------- | ----------- | ----------------- | ----------- | ------ |
+| name     | string(35)  | Nome do usuário   | &check;     |        |
+| email    | string(255) | E-mail do usuário | &check;     |        |
+| password | string(30)  | Senha do usuário  | &check;     |        |
 
 Não é possível criar dois usuários com o mesmo e-mail.
 
@@ -95,14 +97,16 @@ No caminho da requisição substitua `:user_id` pelo ID do usuário que deseja e
 ```json
 {
   "name": "Joyce Sampaio",
-  "email": "joyce.sampaio@gmail.com"
+  "email": "joyce.sampaio@gmail.com",
+  "password": "456"
 }
 ```
 
-| Nome  | Valor       | Descrição         | Obrigatório | Padrão |
-| ----- | ----------- | ----------------- | ----------- | ------ |
-| name  | string(35)  | Nome do usuário   |             |        |
-| email | string(255) | E-mail do usuário |             |        |
+| Nome     | Valor       | Descrição         | Obrigatório | Padrão |
+| -------- | ----------- | ----------------- | ----------- | ------ |
+| name     | string(35)  | Nome do usuário   |             |        |
+| email    | string(255) | E-mail do usuário |             |        |
+| password | string(30)  | Senha do usuário  |             |        |
 
 ### Obter um usuário pelo ID:
 
